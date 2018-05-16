@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Entertainer" representedClassName="Entertainer" syncable="YES" codeGenerationType="class">
+        <attribute name="age" attributeType="Integer 16" defaultValueString="18" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="skill" attributeType="String" syncable="YES"/>
+        <relationship name="favoriteFood" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Food" inverseName="entertainers" inverseEntity="Food" syncable="YES"/>
+    </entity>
+    <entity name="Food" representedClassName="Food" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="entertainers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Entertainer" inverseName="favoriteFood" inverseEntity="Entertainer" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Entertainer" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Food" positionX="205" positionY="-126" width="128" height="88"/>
+    </elements>
+</model>
